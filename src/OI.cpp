@@ -18,6 +18,8 @@
 #include "Commands/ClimbUp.h"
 #include "Commands/CloseGrabber.h"
 #include "Commands/Downshift.h"
+#include "Commands/DriveBack.h"
+#include "Commands/DriveStraight.h"
 #include "Commands/DriveWithJoy.h"
 #include "Commands/LowerElbow.h"
 #include "Commands/LowerMast.h"
@@ -43,6 +45,8 @@ OI::OI() {
     climbUp1->WhileHeld(new ClimbUp());
 
     // SmartDashboard Buttons
+    frc::SmartDashboard::PutData("Drive Back", new DriveBack());
+    frc::SmartDashboard::PutData("Drive Straight", new DriveStraight());
     frc::SmartDashboard::PutData("Drive With Joy", new DriveWithJoy());
     frc::SmartDashboard::PutData("Reset Ahrs", new ResetAhrs());
     frc::SmartDashboard::PutData("Downshift", new Downshift());
